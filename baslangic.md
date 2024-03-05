@@ -2,7 +2,7 @@
 description: Django projesi başlatma adımlarına buradan ulaşılabilir
 ---
 
-# Başlangıç
+# 🐢 Başlangıç
 
 
 
