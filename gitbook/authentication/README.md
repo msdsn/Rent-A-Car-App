@@ -20,3 +20,18 @@ description: >-
 <mark style="background-color:purple;">urls.py</mark> dosyasını users içinde oluşturdum. &#x20;
 
 <mark style="background-color:purple;">serializers.py</mark> isminde bir dosya oluşturdum. [Bir serializer yazdım.](register-serializer.md)
+
+<mark style="background-color:purple;">views.py</mark> dosyasına view ekleyelim. [RegisterView](register-view.md)
+
+<mark style="background-color:red;">users</mark> uygulamasının <mark style="background-color:purple;">urls.py</mark> dosyasını ayarlayalım
+
+{% code title="urls.py" %}
+```python
+from django.urls import path, include
+from .views import RegisterView
+urlpatterns = [
+    path('auth/', include('dj_rest_auth.urls')),
+    path('register/', RegisterView.as_view(), name='auth_register'),
+]
+```
+{% endcode %}
