@@ -25,7 +25,7 @@ description: >-
 
 <mark style="background-color:red;">users</mark> uygulamasının <mark style="background-color:purple;">urls.py</mark> dosyasını ayarlayalım
 
-{% code title="urls.py" %}
+{% code title="users/urls.py" %}
 ```python
 from django.urls import path, include
 from .views import RegisterView
@@ -35,3 +35,48 @@ urlpatterns = [
 ]
 ```
 {% endcode %}
+
+Token oluşturmak için signals yazdım. [Signals](signals.md)
+
+<mark style="background-color:red;">main</mark> içerisindeki <mark style="background-color:purple;">urls.py</mark> ayarını yaptım
+
+{% code title="main/urls.py" %}
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
+]
+```
+{% endcode %}
+
+<mark style="background-color:purple;">setting.py</mark> dosyasını ayarladım
+
+```python
+INSTALLED_APPS = [
+    # ... [Genel Appler]
+
+    # Third-party apps
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj-rest-auth',
+
+    # Local apps
+    'users',
+]
+# ... [Ayarlar]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
+REST_AUTH_SERIALIZERS = {
+    'TOKEN_SERIALIZER': 'users.serializers.CustomTokenSerializer',
+}
+
+```
+
+Kendimiz bir token serializer yazıp bunu yukarıdaki gibi ayarlara koyabiliyoruz. Şimdik [CustomTokenSerializer](customtokenserializer.md) yazalım.
