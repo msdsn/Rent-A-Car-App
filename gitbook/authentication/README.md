@@ -6,11 +6,17 @@ description: >-
 
 # 🚪 Authentication
 
-## Başlangıç Noktası:
+## Start project:
 
 `git clone git@github.com:msdsn/Rent-A-Car-App.git`
 
 `git checkout 45e310191bcefe6e8c683b66bf021e2c7e48b62b`
+
+## Final project:
+
+`git clone git@github.com:msdsn/Rent-A-Car-App.git`
+
+`git checkout 7434ea79cbc9365250ba796498f7353a1c6f1a17`
 
 ## Adım adım yaptıklarım:
 
