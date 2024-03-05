@@ -1,3 +1,9 @@
+---
+description: >-
+  Hesap oluşturulmasını sağlayan bir endpoint oluşturma ve hesap oluştuğunda
+  token ile birlikte kullanıcıya yanıt dönme
+---
+
 # 🎥 Register View
 
 ## Start project
