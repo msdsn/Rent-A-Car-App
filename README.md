@@ -1,5 +1,4 @@
 # 🚗 Rent-A-Car-App
 
-Başlangıç için şuraya bakabilirsin. -> [Başlangıç](baslangic.md)
+Kitap'a burdan ulasabilirsin -> [Rent A Car](https://msdsn.gitbook.io/rent-a-car-app)
 
-Authentication için adımlar -> [Authentication](authentication/)
