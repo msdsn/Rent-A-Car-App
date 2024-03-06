@@ -8,9 +8,17 @@ description: >-
 
 ## Start Project
 
-[Start Project](car-app/#start-project)
+[Start Project](car-app.md#start-project)
 
 ## Final Project
+
+`git clone git@github.com:msdsn/Rent-A-Car-App.git`
+
+`git checkout ded6197d6e3dd5a29fce607619ef62ab282e5f25`
+
+[Kurulum Tamamla](projeye-istedigin-yerden-basla.md)
+
+***
 
 {% code title="car/models.py" %}
 ```python
@@ -78,3 +86,7 @@ from .models import Car
 admin.site.register(Car)
 ```
 {% endcode %}
+
+Yapılanları denemek için
+
+`http://127.0.0.1:8000/api/cars/`
