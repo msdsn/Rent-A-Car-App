@@ -33,4 +33,4 @@ Başlangıç için şuraya bakabilirsin. -> [Başlangıç](baslangic.md)
 
 Authentication için adımlar -> [Authentication](authentication/)
 
-Car uygulaması -> [Car App](car-app.md)
+Car uygulaması -> [Car App](car-app/)
