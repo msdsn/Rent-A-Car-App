@@ -7,4 +7,4 @@
   * [🎥 Register View](authentication/register-view.md)
   * [📶 Signals](authentication/signals.md)
   * [✂️ CustomTokenSerializer](authentication/customtokenserializer.md)
-* [Page](page.md)
+* [🚛 Car App](car-app.md)
