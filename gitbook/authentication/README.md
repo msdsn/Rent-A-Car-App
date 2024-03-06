@@ -44,6 +44,23 @@ urlpatterns = [
 
 Token oluşturmak için signals yazdım. [Signals](signals.md)
 
+Oluşturduğumuz signalin geçerli olması için aşağıdaki gibi <mark style="background-color:purple;">apps.py</mark> dosyasını güncellemeliyiz.
+
+{% code title="apps.py" %}
+```python
+from django.apps import AppConfig
+
+
+class UsersConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'users'
+
+    def ready(self) -> None:
+        import users.signals
+
+```
+{% endcode %}
+
 <mark style="background-color:red;">main</mark> içerisindeki <mark style="background-color:purple;">urls.py</mark> ayarını yaptım
 
 {% code title="main/urls.py" %}
